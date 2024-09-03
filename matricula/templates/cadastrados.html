@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoas Cadastradas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec; /* Rosa claro */
+            color: #880e4f; /* Rosa escuro */
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            color: #f06292; /* Rosa médio */
+            border-bottom: 2px solid #f48fb1; /* Rosa claro */
+            margin-bottom: 20px;
+        }
+        .user-card {
+            background-color: #f8bbd0; /* Rosa muito claro */
+            border: 1px solid #f48fb1; /* Rosa claro */
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px auto;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .user-card p {
+            margin: 5px 0;
+            color: #880e4f; /* Rosa escuro */
+        }
+    </style>
+</head>
+<body>
+    <h1>Pessoas Já Cadastradas</h1>
+
+    {% for x in cadastrados %}
+        <div class="user-card">
+            <p><strong>Nome Completo:</strong> {{ x.nome_completo }}</p>
+            <p><strong>Data de Nascimento:</strong> {{ x.data_nascimento }}</p>
+            <p><strong>Nacionalidade:</strong> {{ x.nacionalidade }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>

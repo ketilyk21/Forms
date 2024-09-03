@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec; /* Rosa claro */
+            color: #880e4f; /* Rosa escuro */
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            color: #f06292; /* Rosa médio */
+        }
+        form {
+            background-color: #f8bbd0; /* Rosa muito claro */
+            border: 1px solid #f48fb1; /* Rosa claro */
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            background-color: #ec407a; /* Rosa forte */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d81b60; /* Rosa mais escuro */
+        }
+    </style>
+</head>
+<body>
+    <h1>Página de Cadastro</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
